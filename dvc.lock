@@ -6,6 +6,9 @@ stages:
     - path: data/raw/pima-indians-diabetes.csv
       md5: cfa2f3a14e4199be0b1e0653db9574d3
       size: 23279
+    - path: params.yaml
+      md5: 883fdb985918900f06d71eca864bedfc
+      size: 582
     - path: src/data/make_dataset.py
       md5: 4e817c8ffb56eb9ad714de463d010de0
       size: 1108
@@ -25,13 +28,13 @@ stages:
       md5: 7116839d6c069c2e99c4201fe7a1181c
       size: 14129
     - path: params.yaml
-      md5: ca0e42c58767ab420946ae330e902b7c
-      size: 580
+      md5: 883fdb985918900f06d71eca864bedfc
+      size: 582
     - path: src/models/train_model.py
-      md5: ed09a5a7a3cf6f26f3d95bc1189ad34d
-      size: 2383
+      md5: 15152ef159860cdf3698cf2a2033fa77
+      size: 2389
     outs:
-    - path: models/final_model.joblib
+    - path: models/final_model_dvc.joblib
       md5: 2293109198c01c9b9ab88ece766d1e2b
       size: 968
     - path: reports/train_scores.json
@@ -45,12 +48,12 @@ stages:
     - path: data/processed/test_pima-indians-diabetes.csv
       md5: 0c17c87a05f1a6d611727d3ae88c9e15
       size: 11656
-    - path: models/final_model.joblib
+    - path: models/final_model_dvc.joblib
       md5: 2293109198c01c9b9ab88ece766d1e2b
       size: 968
     - path: params.yaml
-      md5: 96cab5f82cfed7b3f13b913f107b2f6d
-      size: 579
+      md5: 883fdb985918900f06d71eca864bedfc
+      size: 582
     - path: src/models/predict_model.py
       md5: 247f8ddf88cb72cd935a5c6e22bf4870
       size: 4244

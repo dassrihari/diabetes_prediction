@@ -59,7 +59,7 @@ def train(config_path):
     os.makedirs(model_dir, exist_ok=True)
     model_path = os.path.join(model_dir, "final_model.joblib")
     joblib.dump(model, model_path)
-    model_path = os.path.join(model_dir, "model_dvc.joblib")
+    model_path = os.path.join(model_dir, "final_model_dvc.joblib")
     joblib.dump(model, model_path)
     print("Pima India dataset with solver as saga")
 

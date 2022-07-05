@@ -1,5 +1,5 @@
 base:
-  project: SAHeart-project
+  project: Diabetes Detection
   random_state: 789456
   target_col: label
   solver: newton-cg
@@ -14,7 +14,6 @@ split_data:
   test_size: 0.45
 
 model_dir: models
-
 
 reports:
   train_scores: reports/train_scores.json

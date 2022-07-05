@@ -2,6 +2,7 @@ stages:
   make_data:
     cmd: python3 src/data/make_dataset.py --config=params.yaml
     deps:
+    - params.yaml
     - src/data/make_dataset.py
     - data/raw/pima-indians-diabetes.csv
     outs:
@@ -17,7 +18,7 @@ stages:
     - src/models/train_model.py
     
     outs:
-    - models/final_model.joblib
+    - models/final_model_dvc.joblib
 
     metrics:
     - reports/train_scores.json:
@@ -30,7 +31,7 @@ stages:
     - params.yaml
     - data/processed/test_pima-indians-diabetes.csv
     - src/models/predict_model.py
-    - models/final_model.joblib
+    - models/final_model_dvc.joblib
 
     metrics:
     - reports/test_scores.json:
