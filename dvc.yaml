@@ -17,7 +17,7 @@ stages:
     - src/models/train_model.py
     
     outs:
-    - models/model_dvc.joblib
+    - models/final_model.joblib
 
     metrics:
     - reports/train_scores.json:
@@ -30,7 +30,7 @@ stages:
     - params.yaml
     - data/processed/test_pima-indians-diabetes.csv
     - src/models/predict_model.py
-    - models/model_dvc.joblib
+    - models/final_model.joblib
 
     metrics:
     - reports/test_scores.json:

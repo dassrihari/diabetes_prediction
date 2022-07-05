@@ -36,7 +36,7 @@ def evaluate(config_path):
     print(test[target])
     test_x = test.drop(target, axis=1)
 
-    model_path = os.path.join(model_dir, "model.joblib")
+    model_path = os.path.join(model_dir, "final_model.joblib")
     model = joblib.load(model_path)    
     # Report test set score
     test_score = model.score(test_x, test_y) * 100
