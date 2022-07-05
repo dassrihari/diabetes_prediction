@@ -1,0 +1,7 @@
+{
+    "Test Score": 72.04610951008645,
+    "ROC_AUC": 0.7980573751976509,
+    "Test Size": 347,
+    "Solver": "newton-cg",
+    "Accuracy": 0.7204610951008645
+}

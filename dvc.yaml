@@ -1,0 +1,52 @@
+stages:
+  make_data:
+    cmd: python3 src/data/make_dataset.py --config=params.yaml
+    deps:
+    - src/data/make_dataset.py
+    - data/raw/pima-indians-diabetes.csv
+    outs:
+    - data/processed/train_pima-indians-diabetes.csv
+    - data/processed/test_pima-indians-diabetes.csv
+
+  train:
+    cmd: [python3 src/models/train_model.py --config=params.yaml, dvc plots show]
+    
+    deps:
+    - params.yaml
+    - data/processed/train_pima-indians-diabetes.csv
+    - src/models/train_model.py
+    
+    outs:
+    - models/model_dvc.joblib
+
+    metrics:
+    - reports/train_scores.json:
+        cache: false
+
+  test:
+    cmd: [python3 src/models/predict_model.py --config=params.yaml, dvc plots show]
+
+    deps:
+    - params.yaml
+    - data/processed/test_pima-indians-diabetes.csv
+    - src/models/predict_model.py
+    - models/model_dvc.joblib
+
+    metrics:
+    - reports/test_scores.json:
+        cache: false
+
+    plots:
+
+    - reports/prc.json:
+        cache: false
+        x: recall
+        y: precision
+    - reports/roc.json:
+        cache: false
+        x: fpr
+        y: tpr
+    - reports/cm.csv:
+        cache: false
+
+#

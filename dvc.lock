@@ -1,0 +1,69 @@
+schema: '2.0'
+stages:
+  make_data:
+    cmd: python3 src/data/make_dataset.py --config=params.yaml
+    deps:
+    - path: data/raw/pima-indians-diabetes.csv
+      md5: cfa2f3a14e4199be0b1e0653db9574d3
+      size: 23279
+    - path: src/data/make_dataset.py
+      md5: 4e817c8ffb56eb9ad714de463d010de0
+      size: 1108
+    outs:
+    - path: data/processed/test_pima-indians-diabetes.csv
+      md5: 0c17c87a05f1a6d611727d3ae88c9e15
+      size: 11656
+    - path: data/processed/train_pima-indians-diabetes.csv
+      md5: 7116839d6c069c2e99c4201fe7a1181c
+      size: 14129
+  train:
+    cmd:
+    - python3 src/models/train_model.py --config=params.yaml
+    - dvc plots show
+    deps:
+    - path: data/processed/train_pima-indians-diabetes.csv
+      md5: 7116839d6c069c2e99c4201fe7a1181c
+      size: 14129
+    - path: params.yaml
+      md5: 96cab5f82cfed7b3f13b913f107b2f6d
+      size: 579
+    - path: src/models/train_model.py
+      md5: 332e8f4d4d2bd44edd6a31a4f483b73b
+      size: 2377
+    outs:
+    - path: models/model_dvc.joblib
+      md5: 2293109198c01c9b9ab88ece766d1e2b
+      size: 968
+    - path: reports/train_scores.json
+      md5: f26e8c896f87cc60e32a869541deea02
+      size: 90
+  test:
+    cmd:
+    - python3 src/models/predict_model.py --config=params.yaml
+    - dvc plots show
+    deps:
+    - path: data/processed/test_pima-indians-diabetes.csv
+      md5: 0c17c87a05f1a6d611727d3ae88c9e15
+      size: 11656
+    - path: models/model_dvc.joblib
+      md5: 2293109198c01c9b9ab88ece766d1e2b
+      size: 968
+    - path: params.yaml
+      md5: 96cab5f82cfed7b3f13b913f107b2f6d
+      size: 579
+    - path: src/models/predict_model.py
+      md5: 3a12f1ca14cc22a1031da878211f5b81
+      size: 4238
+    outs:
+    - path: reports/cm.csv
+      md5: d1e2c87a1bb9869c3b88f2828bf0a272
+      size: 1404
+    - path: reports/prc.json
+      md5: 36145ed8ddb8e1869654ba66119560a4
+      size: 277
+    - path: reports/roc.json
+      md5: 69dd270176d8ca4b3f078a5c1b269056
+      size: 341
+    - path: reports/test_scores.json
+      md5: b044af6721d5cae3b6d358678a91741e
+      size: 159
