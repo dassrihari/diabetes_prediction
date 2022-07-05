@@ -15,7 +15,7 @@ Project Organization
     │   ├── workflows
         │   ├── cml.yaml   <- cml file for git actions.
     ├── data
-    │   ├── processed      <- The final, canonical data sets for modeling - created locally on executing dvc repro load_data
+    │   ├── processed      <- The final, canonical data sets for modeling - created locally on executing dvc repro make_data to keep test and train csv after split
     │   └── raw            <- The original, immutable data dump.
     │
     ├── models             <- Trained models
