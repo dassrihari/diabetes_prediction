@@ -15,6 +15,7 @@ split_data:
 
 model_dir: models
 
+
 reports:
   train_scores: reports/train_scores.json
   test_scores: reports/test_scores.json

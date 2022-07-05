@@ -25,8 +25,8 @@ stages:
       md5: 7116839d6c069c2e99c4201fe7a1181c
       size: 14129
     - path: params.yaml
-      md5: 96cab5f82cfed7b3f13b913f107b2f6d
-      size: 579
+      md5: ca0e42c58767ab420946ae330e902b7c
+      size: 580
     - path: src/models/train_model.py
       md5: ed09a5a7a3cf6f26f3d95bc1189ad34d
       size: 2383
