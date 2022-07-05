@@ -38,7 +38,7 @@ Project Organization
     │   │   └── train_model.py
     │   │
     ├── dvc_plots          <- Generate by dvc plots show.
-    │   ├── index.html           <- plot   
+    │   ├── index.html     <- generated plot by dvc.
     └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
     
     
