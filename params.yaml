@@ -2,7 +2,7 @@ base:
   project: Diabetes Detection
   random_state: 789456
   target_col: label
-  solver: newton-cg
+  solver: saga
   ### liblinear, newton-cg, sag, saga, lbfgs
 
 load_data:
