@@ -6,7 +6,7 @@ jobs:
     container: docker://ghcr.io/iterative/cml:0-dvc2-base1
     steps:
       - name: work around permission issue
-        run: git config --global --add safe.directory /__w/digitRecognition/digitRecognition
+        run: git config --global --add safe.directory /__w/diabetes_prediction/diabetes_prediction
       - uses: actions/checkout@v2
       - name: cml_run
         env:
