@@ -57,7 +57,8 @@ Following is the file structure
       models/evaluate.py       -- Performing validation using the test split (20%)
 
 ## report -- Generated Reports
-      train_scores.json        -- Report containing the Train Size, Train Score and Solver
+      features/roc_auc.png    -- ROC AUC Plot
+      train_scores.json       -- Report containing the Train Size, Train Score and Solver
       test_scores.json        -- Report containing the Test Size, Test Score, ROC AUC Score and Solver
       cm.csv                  -- Predicted Labels and Test Labels
       prc.json                -- Precision values
