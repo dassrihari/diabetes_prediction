@@ -48,12 +48,13 @@ The repository is configured with DVC and CML.
 The github actions will be carried out upon code push.
 
 
-Following is the file structure
+Following is the Major directory and file structure in detail
 
+## params.yaml               -- Model Configurations, folders, Train test split percentage configuration etc.
 ## src -- Source code direcory
       data/make_dataset.py   -- Preparing the PIMA INDIA DIABETES DATASET. Splitting into Train and Test
       models/train_model.py          -- Performing the training with baseline Linear Regression model
-      models/predict_model.py       -- Performing validation using the test split (20%)
+      models/predict_model.py       -- Performing validation using the test split
 
 ## report -- Generated Reports
       figures/roc_auc.png    -- ROC AUC Plot
@@ -75,7 +76,7 @@ Following is the file structure
 ## DVC Stages
 ![DVC Stages](https://user-images.githubusercontent.com/103778538/177500733-fb8b1f99-3f76-4a35-b45f-3e93069eb8d5.png)
 
-DVC has 3 stages
+DVC has 3 stages are defined by dvc.yaml
 - make_data : preparing the data, performing train test split
 - train : Training the model with train split and saving the model
 - test : Validating the model with test split, generating the report and graph
