@@ -8,6 +8,7 @@ base:
 load_data:
   raw_dataset_csv: data/raw/pima-indians-diabetes.csv
 
+
 split_data:
   train_path: data/processed/train_pima-indians-diabetes.csv
   test_path: data/processed/test_pima-indians-diabetes.csv
