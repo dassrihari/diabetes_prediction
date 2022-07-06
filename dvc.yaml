@@ -10,7 +10,7 @@ stages:
     - data/processed/test_pima-indians-diabetes.csv
 
   train:
-    cmd: [python3 src/models/train_model.py --config=params.yaml, dvc plots show]
+    cmd: [python3 src/models/train_model.py --config=params.yaml]
     
     deps:
     - params.yaml

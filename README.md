@@ -38,7 +38,6 @@ Project Organization
     │   │
     ├── dvc_plots          <- Generate by dvc plots show.
     │   ├── index.html     <- generated plot by dvc.
-    └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
     
     
 # Diabetes_prediction
@@ -89,7 +88,7 @@ DVC has 3 stages
 - Github actions are configured for each push
 - Everytime a docker instance is created
 - It performs the setup using requirement installation
-- Then performs the evaluate step of DVC using ''dvc repro test''
+- Then performs the evaluate step of DVC using ''dvc repro''
 
 ## AWS Configuration
 - The project has been configured in AWS Cloud9 IDE
