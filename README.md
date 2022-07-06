@@ -64,8 +64,9 @@ Following is the file structure
       roc.json                -- roc values
       prediction.png    -- Scatter plot showing the Prediction vs. Ground Truth
 
-![ROC_AUC](https://user-images.githubusercontent.com/103778538/177507393-b4c23d1c-e339-44d0-baf1-d0c97cd550ce.png
-   
+
+   ![ROC_AUC](https://user-images.githubusercontent.com/103778538/177507615-4256eb5e-f353-4969-8e58-1be57b7514ef.png)
+
 ## models -- 
       final_model.joblib  -- Model saved using the joblib utility
 
