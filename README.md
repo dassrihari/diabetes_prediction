@@ -48,7 +48,7 @@ The repository is configured with DVC and CML.
 The github actions will be carried out upon code push.
 
 
-Following is the Major directory and file structure in detail
+## Following is the Major directory and file structure in detail
 
 ## params.yaml               -- Model Configurations, folders, Train test split percentage configuration etc.
 ## src -- Source code direcory
