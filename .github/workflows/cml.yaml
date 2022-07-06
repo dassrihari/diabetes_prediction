@@ -17,5 +17,6 @@ jobs:
           git fetch --prune
           dvc metrics diff --show-md main > report.md
           # Add figure to the report
+          cml-publish reports/figures/roc_auc.png --md >> report.md
           echo "## Validating results by region"
           cml-send-comment report.md
