@@ -68,16 +68,18 @@ Following is the file structure
 ## models -- 
       final_model.joblib  -- Model saved using the joblib utility
 
+## Makefile --
+      make requirements -- To install dependencies
 
 ## DVC Stages
+![DVC Stages](https://user-images.githubusercontent.com/103778538/177500733-fb8b1f99-3f76-4a35-b45f-3e93069eb8d5.png)
 
 DVC has 3 stages
 - make_data : preparing the data, performing train test split
 - train : Training the model with train split and saving the model
 - test : Validating the model with test split, generating the report and graph
 
-![image](https://user-images.githubusercontent.com/47142192/177393533-df06f843-0309-48f0-9592-2b01b2cfbbb7.png)
-
+![DVC Metrics DIff](https://user-images.githubusercontent.com/103778538/177500957-fb73a58d-d625-4351-9e71-287e831002ef.png)
 
 ## Continuous ML
 - Github actions are configured for each push
@@ -92,7 +94,8 @@ DVC has 3 stages
 - The same can be used in future for web app deployment.
 
 
-![image](https://user-images.githubusercontent.com/47142192/177395538-a507c2d3-f672-43fe-bdb3-920df5801b38.png)
+![AWS_Cloud9](https://user-images.githubusercontent.com/103778538/177501013-4904d298-f3f2-4efa-a254-248d751589ab.png)
+
 
 
 --------
