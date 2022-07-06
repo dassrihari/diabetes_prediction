@@ -53,7 +53,7 @@ Following is the file structure
 ## src -- Source code direcory
       data/make_dataset.py   -- Preparing the PIMA INDIA DIABETES DATASET. Splitting into Train and Test
       models/train_model.py          -- Performing the training with baseline Linear Regression model
-      models/evaluate.py       -- Performing validation using the test split (20%)
+      models/predict_model.py       -- Performing validation using the test split (20%)
 
 ## report -- Generated Reports
       features/roc_auc.png    -- ROC AUC Plot
