@@ -60,7 +60,7 @@ def evaluate(config_path):
     plt.plot(fpr,tpr)
     plt.ylabel('True Positive Rate')
     plt.xlabel('False Positive Rate')
-    plt.savefig('reports/roc_auc.png')
+    plt.savefig('reports/figures/roc_auc.png')
         
     nth_point = math.ceil(len(prc_thresholds)/1000)
     prc_points = list(zip(precision, recall, prc_thresholds))[::nth_point]    
